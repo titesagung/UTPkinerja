@@ -1,0 +1,90 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    Scanner sc = new Scanner(System.in);
+
+        int memilih = sc.nextInt();
+
+        Soal jawaban = new Soal();
+
+        switch (memilih) {
+
+            case 1:
+
+                jawaban.a = sc.nextInt();
+
+                System.out.println(jawaban.persegi(jawaban.a));
+
+                break;
+
+            case 2:
+
+                jawaban.b = sc.nextInt();
+
+                jawaban.c = sc.nextInt();
+
+                System.out.println(jawaban.segitiga(jawaban.b, jawaban.c));
+
+                break;
+
+            case 3:
+
+                jawaban.d = sc.nextInt();
+
+                if (jawaban.d % 7 == 0) {
+
+                    System.out.println((double) jawaban.Lingkaran1(jawaban.d));
+
+                    break;
+
+                } else {
+
+                    System.out.println((double) jawaban.Lingkaran2(jawaban.d));
+
+                    break;
+
+                }
+
+            default:
+
+                System.out.println("Silahkan Coba Lagi Input Yang Anda Masukan Masih Kurang Sesuai");
+
+        }
+
+    }
+
+}
+
+class Soal {
+
+    int a, b, c, d;
+
+    int persegi(int luas) {
+
+        return a * a;
+
+    }
+
+    int segitiga(int alas, int tinggi) {
+
+        return b * c / 2;
+
+    }
+
+    int Lingkaran1(int luas) {
+
+        return (int)(22/7*d*d);
+
+    }
+
+    int Lingkaran2(int luas2) {
+
+        return (int)(3.14 * d * d);
+
+    }
+
+}
