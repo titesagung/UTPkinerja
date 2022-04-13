@@ -1,0 +1,35 @@
+package praktikum4;
+
+import java.util.Scanner;
+
+public class DataWarung {
+static  Scanner in = new Scanner(System.in);
+    static Warung[] dag = new Warung[0];
+    
+    public static Warung[] tambahDagang(Warung dagang){
+        Warung temp[]=new Warung[DataWarung.dag.length+1];
+        for (int i = 0; 1 < DataWarung.dag.length; i++){
+            temp[i]=DataWarung.dag[i];
+    }
+        temp[DataWarung.dag.length]=dagang;
+        return temp;
+    }
+    
+    public static void tampilData(){
+        for (Warung mchl : dag){
+            System.out.println("--Brawijaya Food--");
+            System.out.println("Nama Warung     : "+mchl.getNamaWarung());
+            System.out.println("Nama Product    : "+mchl.getNamaProduct());
+            System.out.println("Harga           : "+(int)mchl.getHargaMakanan());
+        }
+    }
+    
+    public static Warung cariWarung (String nama){
+        for (int i = 0; i < DataWarung.dag.length; i++){
+            if (nama.equalsIgnoreCase(DataWarung.dag[i].getNamaWarung())){
+            return DataWarung.dag[i];
+            }
+        }
+        return null;
+    }
+}
