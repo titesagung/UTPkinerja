@@ -1,0 +1,40 @@
+package praktikum4;
+
+public class Warung {
+   String namaWarung,namaProduct;
+        double hargaMakanan;
+   
+   Warung(String namaWarung, String namaProduct, double hargaMakanan){
+       this.namaWarung = namaWarung;
+       this.namaProduct = namaProduct;
+       this.hargaMakanan = hargaMakanan;
+   }
+
+    Warung(String nextLine, double nextDouble) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+   
+   public String getNamaWarung(){
+       return namaWarung;
+   }
+   
+   public void setNamaWarung(String namaWarung){
+       this.namaWarung = namaWarung;
+   }
+   
+   public String getNamaProduct(){
+       return namaProduct;
+   }
+   
+   public void setnamaProduct(String namaProduct){
+       this.namaProduct = namaProduct;
+   }
+   
+   public double getHargaMakanan(){
+       return hargaMakanan;
+   }
+   
+   public void setHargaMakanan(double hargaMakanan){
+       this.hargaMakanan = hargaMakanan;
+   }
+}
